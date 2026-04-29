@@ -14,3 +14,13 @@ This project demonstrates the automation of identity lifecycle management in Azu
 - **Bulk Provisioning:** Automated creation of 10 security groups and 15 users.
 - **Data Integrity:** Used ObjectIDs for membership assignment to prevent syntax errors and ensure precise mapping.
 - **Security Best Practices:** Obfuscation of sensitive tenant information and credential management.
+
+  -------------------------------------------------------------------------------------------------------------------------------
+
+  ## 🛡️ Lab 2: Network Security & Infrastructure Hardening
+Implementation of a **Zero Trust** network perimeter and micro-segmentation.
+
+### 📋 Compliance Mapping
+- **ISO 27001:2022 Control A.8.20 & A.8.22:** Establishing network boundaries and segregating the Front-End subnet from the rest of the environment.
+- **ISO 27001:2022 Control A.8.24:** Cryptographic enforcement by restricting insecure protocols (HTTP/80) and permitting only encrypted channels (HTTPS/443).
+- **Security by Design:** Ensuring all network assets are provisioned within a predefined security perimeter (NSG-to-Subnet binding).
