@@ -53,34 +53,39 @@ Subnet-FrontEnd  .../providers/Microsoft.Network/networkSecurityGroups/NSG-Vicky
 ```
 __________________________________________________________________________________________________________________________________________
 
-🛡️ Lab 3: Compute Hardening & Centralized Logging
+### 🛡️ Lab 3: Compute Hardening & Centralized Logging
 
-Implementation of secure compute assets under a Zero Trust model and centralized telemetry for audit readiness.
+Implementation of secure compute assets under a **Zero Trust** model and centralized telemetry for audit readiness.
 
-📋 Compliance Mapping
+#### 📋 Compliance Mapping
 
-* ISO 27001:2022 Control A.8.2 & A.8.15: Enforcement of privileged access via Managed Identities (secret-less auth) and establishment of logging repositories for event monitoring.
-* ISO 27001:2022 Control A.8.22: Compute isolation by disabling Public IP addresses, ensuring resources are only accessible via private backbones.
-* GDPR Article 25: Data Protection by Design (EEE Sovereignty) by enforcing data residency within the European Economic Area.
-* NIS2 Directive: Strengthening asset resilience and monitoring capabilities through centralized telemetry.
+* **ISO 27001:2022 Control A.8.2 & A.8.15:** Enforcement of privileged access via **Managed Identities** (secret-less auth) and establishment of logging repositories for event monitoring.
+* **ISO 27001:2022 Control A.8.22:** Compute isolation by disabling **Public IP addresses**, ensuring resources are only accessible via private backbones.
+* **GDPR Article 25:** **Data Protection by Design** (EEE Sovereignty) by enforcing data residency within the European Economic Area.
+* **NIS2 Directive:** Strengthening asset resilience and monitoring capabilities through **centralized telemetry**.
 
-🔍 Technical Audit Logs (CLI Verification)
+#### 🔍 Technical Audit Logs (CLI Verification)
 
-1. Secure Compute Inventory (Compliance A.8.22)
-Verification of private-only provisioning and System-Assigned Managed Identity activation.
+##### 1. Secure Compute Inventory (Compliance A.8.22)
+Verification of private-only provisioning and **System-Assigned Managed Identity** activation.
 
+```text
 Name                Identity_Type    PrivateIP    PublicIP    Status
 ------------------  ---------------  -----------  ----------  ---------
 VM-Security-Prod    SystemAssigned   10.3.1.4     None        Succeeded
+```
 
-2. Centralized Telemetry Repository (Audit Trail A.8.15)
-Final confirmation of the Log Analytics Workspace for SIEM/SOC integration.
+##### 2. Centralized Telemetry Repository (Audit Trail A.8.15)
+Final confirmation of the **Log Analytics Workspace** for SIEM/SOC integration.
 
+```text
 Workspace_Name         Region       Provisioning_State    Customer_ID
 ---------------------  -----------  -------------------  ------------------------------------
 Log-Security-Central   westeurope   Succeeded            382e31f7-1981-40f5-b071-1a1b3fc56b7c
+```
 
-3. Identity Security Principal (Zero Trust A.8.2)
-The VM has been granted a unique security identity to eliminate the need for hardcoded credentials:
-PrincipalID: 088b02b1-dce4-43a0-842d-60ff0d90c893
+##### 3. Identity Security Principal (Zero Trust A.8.2)
+The VM has been granted a **unique security identity** to eliminate the need for hardcoded credentials:
+
+**PrincipalID:** `088b02b1-dce4-43a0-842d-60ff0d90c893`
 
