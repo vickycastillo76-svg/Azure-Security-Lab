@@ -91,5 +91,6 @@ The VM has been granted a **unique security identity** to eliminate the need for
 
 ---
 ### 📸 Evidence Gallery - Lab 3
-![Audit Evidence Lab 3](./EVIDENCE/Lab3_Compute_Logging_Validation.png)
+<img width="1713" height="237" alt="Lab3_Compute_Logging_Validation" src="https://github.com/user-attachments/assets/37e1d576-d4e3-4fd2-ba10-d63918f02a5d" />
+
 
