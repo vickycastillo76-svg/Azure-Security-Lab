@@ -118,3 +118,4 @@ AzureActivity
 ### 📸 Evidence Gallery - Lab 4
 <img width="1219" height="407" alt="Evidence_Lab4_Platform_Auditing_ActivityLog" src="https://github.com/user-attachments/assets/38f47976-3016-4dc4-8218-bb9b28f60d95" />
 
+Logs filtrados para mostrar la trazabilidad de operaciones de escritura en la configuración de diagnóstico. Se omite la columna 'Caller' por privacidad de datos (Data Redaction).
