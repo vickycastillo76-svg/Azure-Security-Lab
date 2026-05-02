@@ -95,27 +95,30 @@ The VM has been granted a **unique security identity** to eliminate the need for
 
 ______________________________________________________________________________________________________________________________________________________________
 
-### 🛡️ Módulo 4: Platform Auditing & Incident Management
+### 🛡️ Module 4: Platform Auditing & Incident Management
 
-#### 📝 Registro de Control de Cambios (Change Request CR-2026-004)
-- **Evento:** Restricción de cuota regional para activos de cómputo (SKU Not Available).
-- **Acción Técnica:** Pivot estratégico hacia **Gobernanza de Plataforma**. En lugar de monitorizar un activo individual, se activó la auditoría de nivel de Suscripción.
-- **Resultado de Seguridad:** Centralización del **Azure Activity Log** en el Log Analytics Workspace (Búnker).
+#### 📋 Change Control Record (Change Request CR-2026-004)
+- **Event:** Regional quota restriction for compute assets (SKU Not Available).
+- **Technical Action:** Strategic pivot to **Platform Governance**. Instead of monitoring an individual asset, subscription-level auditing was activated.
+- **Security Outcome:** Centralization of the **Azure Activity Log** into the Log Analytics Workspace (The Vault).
 
-#### 🔍 Evidencia de Auditoría de Plataforma (ISO 27001 A.8.15)
-Se ha configurado la exportación masiva de eventos administrativos hacia el SIEM regional en Ámsterdam. Esto permite auditar:
-- Intentos de creación/borrado de recursos.
-- Cambios en políticas de red.
-- Fallos de aprovisionamiento del proveedor.
+#### 🔍 Platform Audit Evidence (ISO 27001 A.8.15)
+Bulk export of administrative and security events has been configured towards the regional SIEM in Amsterdam. This enables auditing of:
+- Resource creation/deletion attempts.
+- Network security policy changes.
+- Provider provisioning failures.
 
-**KQL Query para Auditoría de Operaciones:**
+> **⚠️ Audit Note (Data Redaction):** The 'Caller' column (User Identity) has been intentionally filtered out from the evidence below to comply with **GDPR Data Minimization** and privacy best practices for public repositories.
+
+**KQL Query for Operations Auditing:**
+```kusto
 AzureActivity
 
 | where TimeGenerated > ago(24h)
-| project TimeGenerated, OperationNameValue, ActivityStatusValue, Caller
+| project TimeGenerated, OperationNameValue, ActivityStatusValue
 | order by TimeGenerated desc
+```
 
+---
 ### 📸 Evidence Gallery - Lab 4
-<img width="1219" height="407" alt="Evidence_Lab4_Platform_Auditing_ActivityLog" src="https://github.com/user-attachments/assets/38f47976-3016-4dc4-8218-bb9b28f60d95" />
-
-Logs filtrados para mostrar la trazabilidad de operaciones de escritura en la configuración de diagnóstico. Se omite la columna 'Caller' por privacidad de datos (Data Redaction).
+![Platform Audit Evidence](./EVIDENCE/Evidence_Lab4_Platform_Auditing_ActivityLog.png)
