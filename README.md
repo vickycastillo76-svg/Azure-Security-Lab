@@ -93,4 +93,28 @@ The VM has been granted a **unique security identity** to eliminate the need for
 ### 📸 Evidence Gallery - Lab 3
 <img width="1713" height="237" alt="Lab3_Compute_Logging_Validation" src="https://github.com/user-attachments/assets/37e1d576-d4e3-4fd2-ba10-d63918f02a5d" />
 
+______________________________________________________________________________________________________________________________________________________________
+
+### 🛡️ Módulo 4: Platform Auditing & Incident Management
+
+#### 📝 Registro de Control de Cambios (Change Request CR-2026-004)
+- **Evento:** Restricción de cuota regional para activos de cómputo (SKU Not Available).
+- **Acción Técnica:** Pivot estratégico hacia **Gobernanza de Plataforma**. En lugar de monitorizar un activo individual, se activó la auditoría de nivel de Suscripción.
+- **Resultado de Seguridad:** Centralización del **Azure Activity Log** en el Log Analytics Workspace (Búnker).
+
+#### 🔍 Evidencia de Auditoría de Plataforma (ISO 27001 A.8.15)
+Se ha configurado la exportación masiva de eventos administrativos hacia el SIEM regional en Ámsterdam. Esto permite auditar:
+- Intentos de creación/borrado de recursos.
+- Cambios en políticas de red.
+- Fallos de aprovisionamiento del proveedor.
+
+**KQL Query para Auditoría de Operaciones:**
+AzureActivity
+
+| where TimeGenerated > ago(24h)
+| project TimeGenerated, OperationNameValue, ActivityStatusValue, Caller
+| order by TimeGenerated desc
+
+### 📸 Evidence Gallery - Lab 4
+<img width="1219" height="407" alt="Evidence_Lab4_Platform_Auditing_ActivityLog" src="https://github.com/user-attachments/assets/38f47976-3016-4dc4-8218-bb9b28f60d95" />
 
