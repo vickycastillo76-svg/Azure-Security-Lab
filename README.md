@@ -186,7 +186,7 @@ To eliminate the attack surface and implement **Network Segregation**, I impleme
 - **Inventory Audit:** Conducted a full **Shadow IT cleanup**, decommissioning redundant VNets in non-EU regions to ensure compliance with **Sovereignty** and **FinOps** best practices.
 
 **Evidence: Bastion Deployment & Final Network Architecture Audit**
-![Network Hardening Audit](./EVIDENCE/Evidence_Lab4_Network_Hardening_Audit.png)
+![Network Hardening Audit](./EVIDENCE%20/Evidence_Lab4_Network_Hardening_Audit.png)
 
 #### 🛠️ Automation Tools
 The complete automation script for these governance and hardening tasks is available here: [SOC_and_Network_Hardening.sh](./SOC_and_Network_Hardening.sh)
