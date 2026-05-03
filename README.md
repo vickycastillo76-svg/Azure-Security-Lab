@@ -122,3 +122,22 @@ AzureActivity
 ---
 ### 📸 Evidence Gallery - Lab 4
 ![Platform Audit Evidence](./EVIDENCE/Evidence_Lab4_Platform_Auditing_ActivityLog.png)
+
+### 🛡️ Module 4 (Part 2): SOC Validation & Incident Response
+
+To conclude the project, I conducted a **Live Security Validation** to ensure the SIEM (Log Analytics) and the Alerting System were functioning according to professional standards.
+
+#### 🧪 Incident Simulation & Forensic Analysis
+I simulated an unauthorized resource modification to test detection capabilities:
+1. **Action:** Manual deletion of a Public IP resource via CLI.
+2. **Detection:** The **Azure Activity Log** successfully captured the `DELETE` event.
+3. **Traceability:** Using **KQL (Kusto Query Language)**, I extracted the evidence from the Vault, proving the exact timestamp and operation success.
+4. **Alerting:** Confirmed that the **Activity Log Alert** was triggered for this critical administrative change.
+
+> **🔒 Security & Privacy Note (Data Redaction):** In the forensic evidence below, the 'Caller' column (User Identity) has been intentionally excluded. This follows **GDPR Data Minimization** principles and best practices for public repositories, ensuring that sensitive PII (Personally Identifiable Information) is not exposed while maintaining the technical integrity of the audit trail.
+
+#### 📸 Technical Evidence
+![SOC Validation Evidence](./EVIDENCE/Evidence_Lab4_SOC_Validation.png)
+
+> **Final Conclusion:** This laboratory demonstrates a complete **Secure-by-Design** architecture. From isolated networking and identity-based access to a fully functional SOC with real-time alerting and forensic logging.
+
