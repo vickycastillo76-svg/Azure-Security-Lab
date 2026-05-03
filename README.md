@@ -192,7 +192,7 @@ To eliminate the attack surface and implement **Network Segregation**, I impleme
 The complete automation script for these governance and hardening tasks is available here: [SOC_and_Network_Hardening.sh](./SOC_and_Network_Hardening.sh)
 
 ---
-#### 🖥️ Workload Security & SIEM Integration (NIST SP 800-53 / ISO 27001 A.12.4.3)
+### 🛡️ Module 4 (Part 4): Workload Security & SIEM Integration (ISO 27001 / NIS2 / GDPR)
 To close the security loop, I deployed a private Linux node and automated its telemetry ingestion, ensuring full visibility of the hospital's internal assets:
 
 1. **Privacy by Design (GDPR Art. 25):** The VM was deployed in the `Subnet-FrontEnd` with **Zero Public Exposure** (no Public IP). This ensures the instance is invisible to the public internet, mitigating 100% of external brute-force attempts.
@@ -200,7 +200,7 @@ To close the security loop, I deployed a private Linux node and automated its te
 3. **Connectivity Validation (Heartbeat):** Verified the real-time **Heartbeat** signal in the SIEM. This proves the end-to-end telemetry pipeline is operational, from the private network to the centralized log vault in Amsterdam.
 
 **Evidence: Real-time VM Heartbeat in Log Analytics**
-![VM Heartbeat Evidence](./EVIDENCE/Evidence_Lab4_VM_Heartbeat.png)
+![VM Heartbeat Evidence](./EVIDENCE%20/Evidence_Lab4_VM_Heartbeat.png)
 
 #### 🛠️ Automation & Monitoring Tools
 The specific automation script for secure workload provisioning and SIEM integration is available here: [Workload_Security_and_Monitoring.sh](./Workload_Security_and_Monitoring.sh)
