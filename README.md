@@ -141,3 +141,15 @@ I simulated an unauthorized resource modification to test detection capabilities
 
 > **Final Conclusion:** This laboratory demonstrates a complete **Secure-by-Design** architecture. From isolated networking and identity-based access to a fully functional SOC with real-time alerting and forensic logging.
 
+#### 📊 SOC Operational Dashboard
+To provide executive-level visibility, I developed a real-time dashboard using **KQL (Kusto Query Language)**. This visualization summarizes all platform operations (Success vs. Failure), enabling the SOC team to monitor the overall health of the Azure infrastructure at a glance.
+
+**KQL Visualization Query:**
+```kusto
+AzureActivity 
+
+| summarize count() by ActivityStatusValue 
+| render piechart
+```
+![SOC Operations Dashboard](./EVIDENCE/SOC_Operations_Dashboard.png)
+
