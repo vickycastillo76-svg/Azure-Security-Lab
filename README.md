@@ -185,7 +185,7 @@ To eliminate the attack surface and implement **Network Segregation**, I impleme
 - **Secure Access:** Management is now performed via SSL (Port 443), removing the need for Public IPs on internal assets and mitigating brute-force risks.
 - **Inventory Audit:** Conducted a full **Shadow IT cleanup**, decommissioning redundant VNets in non-EU regions to ensure compliance with **Sovereignty** and **FinOps** best practices.
 
-**Evidence: Bastion Deployment & Final Network Architecture Audit**
+### 📸 Evidence: Bastion Deployment & Final Network Architecture Audit**
 ![Network Hardening Audit](./EVIDENCE%20/Evidence_Lab4_Network_Hardening_Audit.png)
 
 #### 🛠️ Automation Tools
@@ -199,7 +199,7 @@ To close the security loop, I deployed a private Linux node and automated its te
 2. **Automated Auditing (NIS2 & ISO 27001 A.12.4.1):** Injected the **Log Analytics Agent** via Azure VM Extensions. This automation ensures that every new compute resource is under surveillance from its first second of life.
 3. **Connectivity Validation (Heartbeat):** Verified the real-time **Heartbeat** signal in the SIEM. This proves the end-to-end telemetry pipeline is operational, from the private network to the centralized log vault in Amsterdam.
 
-**Evidence: Real-time VM Heartbeat in Log Analytics**
+### 📸 Evidence: Real-time VM Heartbeat in Log Analytics**
 ![VM Heartbeat Evidence](./EVIDENCE%20/Evidence_Lab4_VM_Heartbeat.png)
 
 #### 🛠️ Automation & Monitoring Tools
