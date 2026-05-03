@@ -153,3 +153,43 @@ AzureActivity
 ```
 ![SOC Operations Dashboard](./EVIDENCE/SOC_Operations_Dashboard.png)
 
+---
+
+### 🛡️ Module 4 (Part 3): Advanced SOC Operations & Infrastructure Hardening
+
+This final module focuses on centralizing telemetry, validating incident response, and hardening the network perimeter, aligned with international security frameworks.
+
+#### 📊 SOC Operational Dashboard & KQL Analysis (ISO 27001 A.12.4.1)
+To provide executive-level visibility and satisfy **Continuous Monitoring** requirements, I developed a real-time dashboard using **KQL (Kusto Query Language)**. This visualization summarizes all platform operations, enabling the SOC team to monitor infrastructure health at a glance.
+
+**KQL Visualization Query:**
+```kusto
+AzureActivity 
+
+
+| summarize count() by ActivityStatusValue 
+| render piechart
+```
+![SOC Operations Dashboard](./EVIDENCE/SOC_Operations_Dashboard.png)
+
+#### 🧪 Incident Simulation & Traceability (NIST SP 800-61)
+I conducted a **Live Security Validation** to test the SIEM's alerting capabilities and incident handling flow:
+1. **Simulation:** Manual deletion of a Public IP resource via CLI.
+2. **Detection:** The **Azure Activity Log** successfully captured the `DELETE` event.
+3. **Traceability:** Verified accountability through forensic KQL queries, ensuring a complete audit trail and **Non-repudiation** (ISO 27001 A.12.4.3).
+
+> **🔒 Security & Privacy Note (Data Redaction):** In the forensic evidence below, the 'Caller' column has been excluded to comply with **GDPR Data Minimization** and privacy best practices for public repositories.
+
+#### 🏰 Advanced Network Hardening (Zero Trust - ISO 27001 A.13.1.1)
+To eliminate the attack surface and implement **Network Segregation**, I implemented an **Azure Bastion Host**:
+- **Secure Access:** Management is now performed via SSL (Port 443), removing the need for Public IPs on internal assets and mitigating brute-force risks.
+- **Inventory Audit:** Conducted a full **Shadow IT cleanup**, decommissioning redundant VNets in non-EU regions to ensure compliance with **Sovereignty** and **FinOps** best practices.
+
+**Evidence: Bastion Deployment & Final Network Architecture Audit**
+![Network Hardening Audit](./EVIDENCE/Evidence_Lab4_Network_Hardening_Audit.png)
+
+#### 🛠️ Automation Tools
+The complete automation script for these governance and hardening tasks is available here: [SOC_and_Network_Hardening.sh](./SOC_and_Network_Hardening.sh)
+
+---
+
