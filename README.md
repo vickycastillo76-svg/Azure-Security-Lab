@@ -121,7 +121,7 @@ AzureActivity
 
 ---
 ### 📸 Evidence Gallery - Lab 4
-![Platform Audit Evidence](./EVIDENCE/Evidence_Lab4_Platform_Auditing_ActivityLog.png)
+![Platform Audit Evidence](./EVIDENCE%20/Evidence_Lab4_Platform_Auditing_ActivityLog.png)
 
 ### 🛡️ Module 4 (Part 2): SOC Validation & Incident Response
 
@@ -136,8 +136,8 @@ I simulated an unauthorized resource modification to test detection capabilities
 
 > **🔒 Security & Privacy Note (Data Redaction):** In the forensic evidence below, the 'Caller' column (User Identity) has been intentionally excluded. This follows **GDPR Data Minimization** principles and best practices for public repositories, ensuring that sensitive PII (Personally Identifiable Information) is not exposed while maintaining the technical integrity of the audit trail.
 
-#### 📸 Technical Evidence
-![SOC Validation Evidence](./EVIDENCE/Evidence_Lab4_SOC_Validation.png)
+#### 📸 Technical Evidence - Lab 4 (part 2)
+![SOC Validation Evidence](./EVIDENCE%20/Evidence_Lab4_SOC_Validation.png)
 
 > **Final Conclusion:** This laboratory demonstrates a complete **Secure-by-Design** architecture. From isolated networking and identity-based access to a fully functional SOC with real-time alerting and forensic logging.
 
