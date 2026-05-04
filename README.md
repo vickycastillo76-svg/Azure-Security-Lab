@@ -153,6 +153,13 @@ AzureActivity
 
 To conclude the project, I conducted a **Live Security Validation** to ensure the SIEM (Log Analytics) and the Alerting System were functioning according to professional standards.
 
+#### 📋 Compliance Mapping
+
+* **ISO 27001:2022 Control A.8.15 & A.8.16:** Establishment of **Logging and Monitoring** activities to detect unauthorized resource modifications and ensure forensic traceability through the centralized SIEM.
+* **NIST SP 800-61 / NIST CSF (Detection):** Alignment with the **Incident Handling Guide** by executing the Detection and Analysis phase through simulated adversarial activity.
+* **GDPR Article 5 & 25:** Enforcement of **Data Minimization** and **Accountability** by protecting audit trails and redacting PII (Personally Identifiable Information) in public forensic reports.
+* **NIS2 Directive:** Strengthening **Incident Management** and operational resilience through proactive monitoring and alerting systems for critical infrastructure.
+  
 #### 🧪 Incident Simulation & Forensic Analysis
 I simulated an unauthorized resource modification to test detection capabilities:
 1. **Action:** Manual deletion of a Public IP resource via CLI.
