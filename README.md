@@ -1,5 +1,21 @@
-# Azure Security Automation Portfolio
-**Author:** Vicky Castillo - Security Auditor & Cloud Security Engineer
+# 🛡️ Azure Enterprise Security Architecture Framework
+**Author:** Victoria Castillo (Vicky Castillo) - Security Auditor & Cloud Security Engineer
+
+Welcome to my **Cloud Security Engineering Portfolio**. This repository showcases a comprehensive, end-to-end framework for deploying and governing **highly secure enterprise environments** on Microsoft Azure.
+
+### 🚀 Technical Evolution: From Scripting to Infrastructure as Code (IaC)
+This project documents a professional roadmap from manual automation to architectural governance:
+- **Foundational Phase (Bash Scripting):** Initial implementation of **Identity & Access Management (IAM)**, **Network Security Groups (NSG)**, and **SOC Operations**. These legacy assets are organized within the `/scripts-bash` directory.
+- **Architectural Phase (Terraform):** The current enterprise standard. I have migrated the core infrastructure to **Terraform (HCL)** to enforce **Zero Trust principles**, **Idempotency**, and **Full Auditability**.
+
+### ⚖️ Compliance & Regulatory Mapping
+The framework is engineered to meet the stringent requirements of international cybersecurity standards for critical infrastructure:
+- **ISO 27001:2022:** Information Security Management and Operational Logging.
+- **NIS2 Directive:** Resilience of high-criticality digital systems.
+- **GDPR:** Privacy by Design and **EU Data Sovereignty** (Denmark/Western Europe regions).
+- **NIST Cybersecurity Framework:** Detection, Protection, and Response capabilities.
+
+---
 
 ## 🛡️ Lab 1: Automated Identity & Access Management (IAM)
 This project demonstrates the automation of identity lifecycle management in Azure Entra ID (formerly Azure AD) using Azure CLI.
@@ -51,6 +67,10 @@ Subred           NSG_Asociado
 ---------------  ------------------------------------------------------------------------------------------
 Subnet-FrontEnd  .../providers/Microsoft.Network/networkSecurityGroups/NSG-Vicky
 ```
+
+#### 🛠️ Automation & Network Tools
+The specific automation script for VNet architecture, Subnetting, and NSG rules is available here: [Network_Security_Hardening.sh](./scripts-bash/Network_Security_Hardening.sh)
+
 __________________________________________________________________________________________________________________________________________
 
 ### 🛡️ Lab 3: Compute Hardening & Centralized Logging
@@ -92,6 +112,9 @@ The VM has been granted a **unique security identity** to eliminate the need for
 ---
 ### 📸 Evidence Gallery - Lab 3
 <img width="1713" height="237" alt="Lab3_Compute_Logging_Validation" src="https://github.com/user-attachments/assets/37e1d576-d4e3-4fd2-ba10-d63918f02a5d" />
+
+#### 🛠️ Automation & Hardening Tools
+The specific automation script for secure compute provisioning and SIEM telemetry baseline is available here: [Compute_Logging_Hardening.sh](./scripts-bash/Compute_Logging_Hardening.sh)
 
 ______________________________________________________________________________________________________________________________________________________________
 
@@ -151,7 +174,10 @@ AzureActivity
 | summarize count() by ActivityStatusValue 
 | render piechart
 ```
-![SOC Operations Dashboard](./EVIDENCE/SOC_Operations_Dashboard.png)
+![SOC Operations Dashboard](./EVIDENCE/SOC_Operations_Dashboard.png) 
+
+#### 🛠️ Automation & Governance Tools
+The specific automation script for Platform Hardening and Audit Logging is available here: [SOC_and_Network_Hardening.sh](./scripts-bash/SOC_and_Network_Hardening.sh)
 
 ---
 
@@ -203,5 +229,5 @@ To close the security loop, I deployed a private Linux node and automated its te
 ![VM Heartbeat Evidence](./EVIDENCE%20/Evidence_Lab4_VM_Heartbeat.png)
 
 #### 🛠️ Automation & Monitoring Tools
-The specific automation script for secure workload provisioning and SIEM integration is available here: [Workload_Security_and_Monitoring.sh](./Workload_Security_and_Monitoring.sh)
+The specific automation script for secure workload provisioning and SIEM integration is available here: [Workload_Security_and_Monitoring.sh](./scripts-bash/Workload_Security_and_Monitoring.sh)
 
