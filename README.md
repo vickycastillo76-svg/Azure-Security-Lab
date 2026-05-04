@@ -31,6 +31,9 @@ This project demonstrates the automation of identity lifecycle management in Azu
 - **Data Integrity:** Used ObjectIDs for membership assignment to prevent syntax errors and ensure precise mapping.
 - **Security Best Practices:** Obfuscation of sensitive tenant information and credential management.
 
+  #### 🛠️ Automation & Identity Tools
+The specific automation script for RBAC, Managed Identities, and User Provisioning is available here: [Identity_Management_Lab.sh](./scripts-bash/Identity_Management_Lab.sh)
+
   -------------------------------------------------------------------------------------------------------------------------------
 
   ## 🛡️ Module 2: Network Security & Infrastructure Hardening
