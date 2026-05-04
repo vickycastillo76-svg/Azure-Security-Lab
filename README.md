@@ -17,7 +17,7 @@ The framework is engineered to meet the stringent requirements of international 
 
 ---
 
-## 🛡️ Lab 1: Automated Identity & Access Management (IAM)
+## 🛡️ Module 1: Automated Identity & Access Management (IAM)
 This project demonstrates the automation of identity lifecycle management in Azure Entra ID (formerly Azure AD) using Azure CLI.
 
 ### 📋 Compliance & Governance Mapping
@@ -33,7 +33,7 @@ This project demonstrates the automation of identity lifecycle management in Azu
 
   -------------------------------------------------------------------------------------------------------------------------------
 
-  ## 🛡️ Lab 2: Network Security & Infrastructure Hardening
+  ## 🛡️ Module 2: Network Security & Infrastructure Hardening
 Implementation of a **Zero Trust** network perimeter and micro-segmentation.
 
 ### 📋 Compliance Mapping
@@ -73,7 +73,7 @@ The specific automation script for VNet architecture, Subnetting, and NSG rules 
 
 __________________________________________________________________________________________________________________________________________
 
-### 🛡️ Lab 3: Compute Hardening & Centralized Logging
+### 🛡️ Module 3: Compute Hardening & Centralized Logging
 
 Implementation of secure compute assets under a **Zero Trust** model and centralized telemetry for audit readiness.
 
