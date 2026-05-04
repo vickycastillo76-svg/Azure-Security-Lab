@@ -151,7 +151,7 @@ AzureActivity
 
 ### 🛡️ Module 4 (Part 2): SOC Validation & Incident Response
 
-To conclude the project, I conducted a **Live Security Validation** to ensure the SIEM (Log Analytics) and the Alerting System were functioning according to professional standards.
+To validate the operational resilience of the architecture, I conducted a Live Security Validation to ensure the SIEM (Log Analytics) and the Alerting System were functioning according to professional standards.
 
 #### 📋 Compliance Mapping
 
@@ -185,9 +185,6 @@ AzureActivity
 | render piechart
 ```
 ![SOC Operations Dashboard](./EVIDENCE/SOC_Operations_Dashboard.png) 
-
-#### 🛠️ Automation & Governance Tools
-The specific automation script for Platform Hardening and Audit Logging is available here: [SOC_and_Network_Hardening.sh](./scripts-bash/SOC_and_Network_Hardening.sh)
 
 ---
 
